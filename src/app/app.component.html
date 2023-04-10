@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p [innerHTML]="title">
+                
+            </p>
+            <hr>
+            <app-child [msgFromParent]="msgForChild" (getMsgFromChild)="onMsgFromChild($event)"></app-child>
+            <hr>
+            <p class="alert alert-info" *ngIf="msgFromChild">
+                {{msgFromChild}}
+            </p>
+            <p class="alert alert-info mt-2" *ngIf="productStatus">
+                {{productStatus}}
+            </p>
+            <app-products (getProductStatus)="updateStatus($event)"></app-products>
+            <!-- <app-child [msgInformation]="msginfo"></app-child>
+            <hr>
+            <app-child [infoProperty]="infos"></app-child>
+            <hr>
+            <app-child [infoTech]="information"></app-child>  -->
+            <hr>
+           
+           
+        </div> 
+    </div>
+</div>
+
+
+
+
+<!-- <app-child [javascript]="javascript"></app-child>
+<app-child [sass]="sass"></app-child>
+<app-child [ts]="ts"></app-child>
+<app-child [flex]="flex"></app-child>
+<app-child [nodejs]="nodejs"></app-child>
+<app-child [java]="java"></app-child>
+<app-child [php]="php"></app-child> -->
+
+
